@@ -1,0 +1,12 @@
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.is-done {
+  text-decoration: line-through;
+}
+.with-border {
+  padding: 10px;
+  border: 1px solid black;
+}
