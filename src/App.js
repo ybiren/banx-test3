@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import TasksList from './components/tasksList'; 
 import 'bootstrap/dist/css/bootstrap.css';
-import TasksHeader from './components/tasksHeader/tasksHeader'; 
+import TasksHeader from './components/tasksHeader/TasksHeader'; 
 
 
 function App() {
