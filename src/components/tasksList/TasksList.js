@@ -11,7 +11,6 @@ export default class TasksList extends Component {
      }
      
      componentWillMount() {
-       //localStorage.setItem('tasksArr', null);
        const tasksArr = JSON.parse(localStorage.getItem('tasksArr')) || [];
        this.setState({tasksArr: tasksArr});
        
@@ -24,6 +23,7 @@ export default class TasksList extends Component {
      addTask(taskDesc) {
        const tasksArr = this.state.tasksArr;
        const task = {txt: taskDesc, status: TASK_NOT_STARTED};
+       // Add task to start of tasks list
        tasksArr.unshift(task);
        this.setState({tasksArr: tasksArr}); 
      }
@@ -32,6 +32,7 @@ export default class TasksList extends Component {
         const ind = event.target.getAttribute('ind');
         const tasksArr = this.state.tasksArr;
         tasksArr[ind].status = event.target.value;
+        // If task is done remove it to end of list
         if(tasksArr[ind].status === TASK_DONE) {
           const task = tasksArr.splice(ind,1);
           tasksArr.push(...task); 

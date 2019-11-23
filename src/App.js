@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import TasksList from './components/tasksList'; 
 import 'bootstrap/dist/css/bootstrap.css';
 import TasksHeader from './components/tasksHeader/TasksHeader'; 
